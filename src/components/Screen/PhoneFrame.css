@@ -1,0 +1,53 @@
+/* PhoneFrame.css */
+.phone-frame {
+    position: relative;
+    width: 300px; /* Adjust the width according to your design */
+    height: 600px; /* Adjust the height according to your design */
+    margin: 0 auto; /* Center the phone frame horizontally */
+   overflow: hiddenZZ;
+}
+  
+  .phone-frame-image {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .screenshots {
+    width: 85%; /* Adjust this value based on the actual phone frame image design */
+    height: 85%; /* Adjust this value based on the actual phone frame image design */
+    position: absolute;
+    top: 7.5%; /* Center the screenshots vertically inside the phone frame */
+    left: 7.5%; /* Center the screenshots horizontally inside the phone frame */
+    z-index: 2;
+  }
+  
+  .screenshot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .screenshot {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensure the screenshots are properly contained within the frame */
+  }
+  
+  /* Slick Carousel Customization */
+  .slick-dots {
+    bottom: 10px; /* Adjust the position of the dots as needed */
+  }
+  
+  .slick-dots li button:before {
+    font-size: 12px;
+    color: #fff; /* Change the color of the dots */
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #000; /* Change the color of the active dot */
+  }

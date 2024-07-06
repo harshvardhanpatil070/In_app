@@ -1,0 +1,117 @@
+/* Apply smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  padding: 10px 20px;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it stays above other content */
+  height: 70px; /* Increased height for more spacing */
+}
+
+/* Logo Styles */
+.logo {
+  font-weight: bold;
+  color: rgb(116, 7, 7);
+  font-size: 1.5em; /* Larger font size for logo */
+  margin-left: 20px; /* Added margin for spacing on the left */
+}
+
+.logo img {
+  height: 50px; /* Adjusted height of the logo */
+  margin-right: 10px; /* Added margin between logo and navigation */
+}
+
+/* Navigation Styles */
+.nav {
+  display: flex;
+  margin-right: 20px; /* Increased margin for spacing on the right */
+}
+
+.nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li {
+  margin-right: 25px; /* Increased margin between navigation items */
+}
+
+.nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em; /* Larger font size for navigation items */
+}
+
+.nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: 20px; /* Added margin for spacing on the right */
+}
+
+.hamburger .bar {
+  width: 25px; /* Default width of hamburger bars */
+  height: 3px; /* Default height of hamburger bars */
+  background-color: white;
+  margin: 4px 0; /* Default margin between hamburger bars */
+  transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    background-color: #000000;
+    position: absolute;
+    top: 70px; /* Adjusted top position for better alignment */
+    right: 0;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s ease;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav ul {
+    flex-direction: column;
+  }
+
+  .nav ul li {
+    margin: 15px 0; /* Increased margin between navigation items */
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px); /* Adjusted hamburger bar positions */
+  }
+
+  .hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px); /* Adjusted hamburger bar positions */
+  }
+}
